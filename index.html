@@ -11,7 +11,7 @@
   <img id="cam" />
 
   <script>
-    const url = "http://193.251.176.121:157/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=aca&pwd=acaLFCD33510";
+    const url = "https://corsproxy.io/?http://193.251.176.121:157/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=aca&pwd=acaLFCD33510";
 
     function refresh() {
       document.getElementById('cam').src = url + "&t=" + Date.now();
@@ -21,4 +21,5 @@
     setInterval(refresh, 1000);
   </script>
 </body>
+
 </html>
