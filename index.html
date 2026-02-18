@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Caméra Live</title>
+  <style>
+    body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    img { max-width: 100%; max-height: 100vh; }
+  </style>
+</head>
+<body>
+  <img id="cam" />
+
+  <script>
+    const url = "http://193.251.176.121:157/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=aca&pwd=acaLFCD33510";
+
+    function refresh() {
+      document.getElementById('cam').src = url + "&t=" + Date.now();
+    }
+
+    refresh();
+    setInterval(refresh, 1000);
+  </script>
+</body>
+</html>
