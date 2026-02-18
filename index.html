@@ -9,19 +9,13 @@
 </head>
 <body>
   <img id="cam" />
-
   <script>
-    const url = "https://thingproxy.freeboard.io/fetch/http://193.251.176.121:157/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=aca&pwd=acaLFCD33510";
-
     function refresh() {
-      document.getElementById('cam').src = url + "&t=" + Date.now();
+      const camUrl = "http://193.251.176.121:157/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=aca&pwd=acaLFCD33510&t=" + Date.now();
+      document.getElementById('cam').src = "https://api.allorigins.win/raw?url=" + encodeURIComponent(camUrl);
     }
-
     refresh();
     setInterval(refresh, 1000);
   </script>
 </body>
-
 </html>
-
-
